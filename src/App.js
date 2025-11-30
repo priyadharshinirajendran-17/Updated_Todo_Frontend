@@ -13,8 +13,7 @@ function App() {
   const [search, setSearch] = useState("");
 
   // Render Backend URL
-  const apiUrl = "https://updated-todo-backendss.onrender.com/todos";
-
+const apiUrl = "https://updated-todo-backendss.onrender.com/todos";
 
   useEffect(() => {
     fetchTodos();
