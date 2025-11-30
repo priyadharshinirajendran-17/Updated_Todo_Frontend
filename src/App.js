@@ -12,7 +12,8 @@ function App() {
   const [editId, setEditId] = useState(null);
   const [search, setSearch] = useState("");
 
-  const apiUrl = "http://localhost:5000/todos";
+  // Render Backend URL
+  const apiUrl = "https://updated-todo-backendss.onrender.com/todos";
 
 
   useEffect(() => {
@@ -91,6 +92,7 @@ function App() {
       </nav>
 
       <div className="container mt-5">
+        {/* 🔎 Search bar */}
         <input
           type="text"
           className="form-control mb-4"
@@ -98,6 +100,7 @@ function App() {
           onChange={(e) => setSearch(e.target.value)}
         />
 
+        {/* Add / Update Form */}
         <div className="card p-4 shadow mb-4">
           <h5 className="text-center fw-bold mb-3">
             {editId ? "✏ Update Todo" : "➕ Add New Todo"}
@@ -167,6 +170,7 @@ function App() {
           </div>
         </div>
 
+        {/* Todo List */}
         <div className="card p-4 shadow">
           <h5 className="text-center fw-bold mb-3">📋 Todo List</h5>
           <table className="table table-hover table-bordered">
@@ -179,6 +183,7 @@ function App() {
                 <th style={{ width: "120px" }}>Actions</th>
               </tr>
             </thead>
+
             <tbody>
               {todos
                 .filter((t) =>
